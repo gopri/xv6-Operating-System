@@ -1,4 +1,25 @@
-## ps system call
+## Backtrace and ps system call
+### Backtrace
+Added backtrace system call to xv6.  
+Interface of this system call: int backtrace();  
+Specifically, if the user program invokes this new system call the system call prints all registers of the user program, and then walks the stack frame by frame printing the return addresses saved on the stack on the console.  
+  
+To call this system call, user program 'bt.c' is implemented.  
+
+Changes are made to files:  
+- Makefile
+- syscall.h
+- syscall.c
+- sysproc.c
+- usys.S
+- user.h
+
+### ps
+Added ps tool that lists all processes running on the system.  
+For ps, implemented yet another system call getprocinfo() that returns information for a process, with interface: int getprocinfo(int proc_num, struct uproc *up);  
+
+To call this system call, user program 'ps.c' is implemented.  
+Required files are updated as above.
 
 ## Thread functionality
 
