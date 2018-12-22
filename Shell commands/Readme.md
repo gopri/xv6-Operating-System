@@ -1,4 +1,4 @@
-#Shell Commands
+# Shell Commands
 This assignment makes us more familiar with the Unix system call interface and the shell by implementing several simple programs and several features in a small shell. 
 
 ## cp
