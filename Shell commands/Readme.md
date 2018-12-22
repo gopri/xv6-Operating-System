@@ -3,7 +3,7 @@ This assignment makes us more familiar with the Unix system call interface and t
 
 ## cp
 main-cp238p.c program implements copy command.  
-It should take two arguments: names of the input and the output files and copy the input file into the output file. 
+It should take two arguments: names of the input and the output files and copy the input file into the output file.  
 It uses read() and write() system calls to read the input file and write the output.  
 Example invocation which copies main.c into main-out.c (assuming you call your executable cp238p)  
 cp238p main.c main-out.c
