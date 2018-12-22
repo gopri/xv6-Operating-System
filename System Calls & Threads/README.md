@@ -22,6 +22,13 @@ To call this system call, user program 'ps.c' is implemented.
 Required files are updated as above.
 
 ## Thread functionality
+Extended xv6 with support for POSIX threads.  
+For this, three system calls were added:
+- thread_create(): to create a kernel thread. Interface: int thread_create(void(*fcn)(void*), void *arg, void*stack)
+- thread_join(): to wait for the thread to finish. Interface: int thread_join(void)
+- thread_exit(): it allows the thread to exit. Interface: int thread_exit(void)
+  
+Implemented POSIX-like synchronization primitives: spinlocks and mutexes.
 
 ## References
 - [System Calls](https://www.ics.uci.edu/~aburtsev/238P/hw/hw3-system-calls.html)
